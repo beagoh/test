@@ -1,0 +1,77 @@
+\documentclass[degree=master, tocarialchapter]{thuthesis}
+%我在联系git
+
+% 所有其它可能用到的包都统一放到这里了，可以根据自己的实际添加或者删除。
+% 本模版遵守开源协议，是在清华大学学位论文基础上修改，著作权归THU所有。
+\usepackage{thuthesis}
+\usepackage{lscape}
+\usepackage{siunitx}
+\usepackage{amstext}
+\usepackage{makecell}
+\usepackage{pdfpages}
+\usepackage{pdflscape}
+\usepackage[hidelinks]{hyperref}
+\usepackage{longtable} %长表格
+\usepackage{tabularx} %长表格
+\usepackage{bookmark}%书签
+\usepackage{CJKulem}%划线换行
+\usepackage{ctable}
+\usepackage{booktabs}
+\usepackage{lastpage} 
+\usepackage{fancyhdr}%导入fancyhdr包
+
+% 定义所有的图片文件在 figures 子目录下
+\graphicspath{{figures/}}
+
+
+\begin{document}
+
+%%% 封面部分
+
+\includepdf[pages={-}]{data/cover_tech/cover_a} %封面
+\includepdf[pages={-}]{data/cover_tech/score_index} %评分索引
+
+\newpage
+
+% 目录
+
+\tableofcontents
+
+
+% 正文部分
+\mainmatter
+
+\fancyfoot{} % 初始化页脚
+\fancyfoot[LO]{第 \thepage\ 页，共 \pageref{LastPage}\ 页}
+%\fancyfoot[LE]{第 \thepage\ 页，共 \pageref{LastPage}\ 页}
+%\fancyfoot[RO]{第 \thepage\ 页，共 \pageref{LastPage}\ 页}
+\fancyfoot[RE]{第 \thepage\ 页，共 \pageref{LastPage}\ 页}
+
+\include{data/chapter/chap01}%第一章
+\include{data/chapter/chap02}%第二章：供货范围
+\include{data/chapter/chap03}%第三章：技术描述
+\include{data/chapter/chap04}%第四章：性能保证
+\include{data/chapter/chap05}%第五章：质量监督
+\include{data/chapter/chap06}%第六章
+\include{data/chapter/chap07}%第七章
+\include{data/chapter/chap08}%第八章
+\include{data/chapter/chap09}%第九章
+\include{data/chapter/chap10}%
+\include{data/chapter/chap11}%
+\include{data/chapter/chap12}%
+\include{data/chapter/chap13}%
+\include{data/chapter/chap14}%
+\include{data/chapter/chap15}%
+\include{data/chapter/chap16}%
+%
+%% 附录
+\appendix
+\input{data/appendix/A}%西核设备资质情况
+\input{data/appendix/A_1}%部分西核设备获得的荣誉
+%\input{data/appendix/B}%焊接及无损检测人员资格情况
+%\input{data/appendix/C}%民用核安全设备质量保证大纲
+%\input{data/appendix/D}%同类设备业绩及用户使用反馈
+%\input{data/appendix/E}%项目团队人员简历
+%\input{data/appendix/F}%工艺流程图
+
+\end{document}
